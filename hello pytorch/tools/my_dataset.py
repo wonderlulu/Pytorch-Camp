@@ -37,10 +37,10 @@ class RMBDataset(Dataset):
         return img, label
 
     def __len__(self):
-        return len(self.data_info)
+        return len(self.data_info)   #查看数据的长度（即样本的数量）
 
     @staticmethod
-    def get_img_info(data_dir):
+    def get_img_info(data_dir):    #自定义的，获取数据的路径和标签
         data_info = list()
         for root, dirs, _ in os.walk(data_dir):
             # 遍历类别
